@@ -1,0 +1,175 @@
+@charset 'UTF-8';
+
+html {
+  font: {
+    size: 62.5%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: {
+    size: 1.4rem;
+    family: sans-serif;
+  }
+}
+
+.app {
+  width: 960px;
+  margin: 0 auto;
+  padding: .5em 0;
+
+  &__title {
+    margin: 0;
+    font: {
+      size: 1.8rem;
+      weight: normal;
+      family: serif;
+    }
+    text-align: center;
+  }
+}
+
+.tester {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  &__header {
+    position: relative;
+    z-index: 2;
+    padding: .5em 0;
+    width: 100%;
+    border-bottom: 1px solid #999;
+  }
+
+  &__content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    min-height: 500px;
+  }
+
+  &__sidebar {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    width: 400px;
+    padding: 1em;
+  }
+
+  &__footer {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: {
+      top: 1em;
+    }
+    padding: 1em 0;
+    border-top: 1px solid #999;
+  }
+
+  &__code {
+    width: 100%;
+    font: {
+      family: Monaco, monospace;
+    }
+  }
+}
+
+.control {
+  &__item {
+    &:not(:last-of-type) {
+      margin: {
+        bottom: 1em;
+      }
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+
+  &__value {
+    margin: {
+      left: .5em;
+    }
+    font: {
+      family: Monaco, monospace;
+    }
+  }
+
+  &__tool {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__tool-item {
+    &--input {
+      flex-grow: 1;
+    }
+
+    &--reset {
+      padding: {
+        left: 1em;
+      }
+    }
+  }
+
+  &__input {
+    &--range {
+      width: 100%;
+    }
+  }
+}
+
+.test-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 240px;
+  color: #fff;
+  background-color: #ccc;
+  font: {
+    size: 4em;
+  }
+  transition: transform .3s;
+}
+
+.copyright {
+  margin: 0;
+  color: #999;
+  font: {
+    size: 1rem;
+    family: serif;
+  }
+  text-align: center;
+}
+
+@media only screen and (max-width: 640px) {
+  .app {
+    width: 92%;
+  }
+
+  .tester {
+    flex-direction: column;
+
+    &__content {
+      width: 100%;
+      min-height: initial;
+      padding: 1em 0;
+    }
+
+    &__sidebar {
+      width: 100%;
+    }
+  }
+
+}

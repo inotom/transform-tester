@@ -1,0 +1,44 @@
+{
+  "name": "transform-tester",
+  "version": "1.0.0",
+  "description": "css transform tester project",
+  "config": {
+    "dist_dir": "dist",
+    "src_dir": "src"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server",
+    "prebuild": "npm run clean",
+    "build": "NODE_ENV=production webpack -p",
+    "clean": "rimraf '**/.DS_Store'",
+    "lint:js": "eslint $npm_package_config_src_dir/js",
+    "lint:sass": "sass-lint -c .sass-lint.yml -v -q",
+    "prettier": "prettier --write 'src/js/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "iNo (http://www.serendip.ws/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.0.0",
+    "@babel/preset-env": "7.0.0",
+    "autoprefixer": "9.1.3",
+    "babel-eslint": "9.0.0",
+    "babel-loader": "8.0.2",
+    "css-loader": "1.0.0",
+    "eslint": "5.5.0",
+    "eslint-plugin-vue": "4.7.1",
+    "node-sass": "4.9.3",
+    "postcss-loader": "3.0.0",
+    "prettier": "1.14.2",
+    "sass-lint": "1.12.1",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.0",
+    "vue": "2.5.17",
+    "vue-loader": "15.4.1",
+    "vue-template-compiler": "2.5.17",
+    "webpack": "4.17.1",
+    "webpack-cli": "3.1.0",
+    "webpack-dev-server": "3.1.7"
+  }
+}

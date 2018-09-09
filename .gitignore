@@ -1,0 +1,7 @@
+.DS_Store
+*.swp
+*~
+*.log
+main.min.js
+sass-style.min.css
+/node_modules
